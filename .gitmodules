@@ -4,3 +4,6 @@
 [submodule "fienestar/monkey"]
 	path = fienestar/monkey
 	url = https://github.com/fienestar/monkey
+[submodule "firekann/monkey"]
+	path = firekann/monkey
+	url = https://github.com/firekann/monkey.git
