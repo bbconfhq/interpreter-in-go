@@ -7,3 +7,6 @@
 [submodule "firekann/monkey"]
 	path = firekann/monkey
 	url = https://github.com/firekann/monkey.git
+[submodule "blurfx"]
+	path = blurfx
+	url = https://github.com/blurfx/interpreter-in-go.git
