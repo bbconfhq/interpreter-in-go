@@ -8,16 +8,25 @@ type Token struct {
 }
 
 const (
-	ILLEGAL = "ILLEGAL" // 어떤 토큰이나 문자를 렉서가 알수 없다.
+	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
 
-	// 식별자 + 리터널
-	IDENT = "IDENT"
-	INT   = "INT"
+	// 식별자 + 리터럴
+	IDENT = "IDENT" // add, foobar, x, y, ...
+	INT   = "INT"   //1343456
 
 	// 연산자
-	ASSIGN = "="
-	PLUS   = "+"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
+
+	LT     = "<"
+	GT     = ">"
+	EQ     = "=="
+	NOT_EQ = "!="
 
 	// 구분자
 	COMMA     = ","
@@ -27,14 +36,25 @@ const (
 	RPAREN = ")"
 	LBRACE = "{"
 	RBRACE = "}"
+
 	// 예약어
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 func LookupIdent(ident string) TokenType {
